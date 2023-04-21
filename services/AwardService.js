@@ -1,6 +1,6 @@
-const ArrayCollection = global.ArrayCollection
-CosmosAward = global.CosmosAward
-const libamf = global.libamf
+const ArrayCollection = require('libamf/src/amf/flash/flex/ArrayCollection')
+const CosmosAward = require('../classes/CosmosAward')
+const libamf = require('libamf')
 
 class AwardService extends libamf.Service {
     constructor() {

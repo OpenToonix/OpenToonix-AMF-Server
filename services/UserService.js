@@ -1,9 +1,9 @@
-const ArrayCollection = global.ArrayCollection
-CosmosFriend = global.CosmosFriend
-CosmosOfflineMessage = global.CosmosOfflineMessage
-CosmosPurchase = global.CosmosPurchase
-CosmosUser = global.CosmosUser
-const libamf = global.libamf
+const ArrayCollection = require('libamf/src/amf/flash/flex/ArrayCollection')
+const CosmosFriend = require('../classes/CosmosFriend')
+const CosmosOfflineMessage = require('../classes/CosmosOfflineMessage')
+const CosmosPurchase = require('../classes/CosmosPurchase')
+const CosmosUser = require('../classes/CosmosUser')
+const libamf = require('libamf')
 
 class UserService extends libamf.Service {
     constructor() {

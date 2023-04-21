@@ -1,7 +1,7 @@
 const ArrayCollection = global.ArrayCollection
-CosmosItem = global.CosmosItem
-CosmosPurchase = global.CosmosPurchase
-const libamf = global.libamf
+const CosmosItem = require('../classes/CosmosItem')
+const CosmosPurchase = require('../classes/CosmosPurchase')
+const libamf = require('libamf')
 
 class CatalogService extends libamf.Service {
     constructor() {

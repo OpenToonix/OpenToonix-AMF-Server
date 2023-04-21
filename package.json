@@ -4,6 +4,7 @@
   "description": "AMF server for Mundo Toonix.",
   "main": "main.js",
   "scripts": {
+    "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "MatyGamingHD",

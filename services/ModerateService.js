@@ -1,6 +1,6 @@
-const ArrayCollection = global.ArrayCollection
-CosmosModerateAnswer = global.CosmosModerateAnswer
-const libamf = global.libamf
+const ArrayCollection = require('libamf/src/amf/flash/flex/ArrayCollection')
+const CosmosModerateAnswer = require('../classes/CosmosModerateAnswer')
+const libamf = require('libamf')
 
 class ModerateService extends libamf.Service {
     constructor() {

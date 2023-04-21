@@ -1,5 +1,5 @@
-CosmosPlanegochi = global.CosmosPlanegochi
-const libamf = global.libamf
+const CosmosPlanegochi = require('../classes/CosmosPlanegochi')
+const libamf = require('libamf')
 
 class PlanegochiService extends libamf.Service {
     constructor() {
