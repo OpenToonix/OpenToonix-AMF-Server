@@ -1,4 +1,4 @@
-ArrayCollection = global.ArrayCollection
+const ArrayCollection = require('libamf/src/amf/flash/flex/ArrayCollection')
 
 class CosmosItem {
     constructor () {

@@ -1,9 +1,14 @@
 const libamf = require('libamf')
 
-// Parametros de configuracion.
-libamf.Service.ForceSuffix = false
-libamf.Service.RequireRegistration = false
-libamf.Server.DisableDefaultHome = true
+const AwardService = require('./services/AwardService')
+const CatalogService = require('./services/CatalogService')
+const ModerateService = require('./services/ModerateService')
+const PlanegochiService = require('./services/PlanegochiService')
+const UserService = require('./services/UserService')
+
+const server = new libamf.Server({
+  path: '/messagebroker/amf'
+})
 
 libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.ActionLogDto', require('./classes/CosmosActionLog'))
 libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.AwardDTO', require('./classes/CosmosAward'))
@@ -16,15 +21,10 @@ libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.PlanegochiDTO', requ
 libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.PurchaseDTO', require('./classes/CosmosPurchase'))
 libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.UserDTO', require('./classes/CosmosUser'))
 
-const server = new libamf.Server({
-  path: '/messagebroker/amf'
-})
-
-const AwardService = require('./services/AwardService')
-const CatalogService = require('./services/CatalogService')
-const ModerateService = require('./services/ModerateService')
-const PlanegochiService = require('./services/PlanegochiService')
-const UserService = require('./services/UserService')
+// Parametros de configuracion.
+libamf.Service.ForceSuffix = false
+libamf.Service.RequireRegistration = false
+libamf.Server.DisableDefaultHome = true
 
 server.registerService(new AwardService())
 server.registerService(new CatalogService())

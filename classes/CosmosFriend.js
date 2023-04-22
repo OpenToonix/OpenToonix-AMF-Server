@@ -1,4 +1,4 @@
-CosmosUser = global.CosmosUser
+const CosmosUser = require('./CosmosUser')
 
 class CosmosFriend {
     constructor () {

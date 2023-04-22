@@ -1,4 +1,4 @@
-const ArrayCollection = global.ArrayCollection
+const ArrayCollection = require('libamf/src/amf/flash/flex/ArrayCollection')
 const CosmosItem = require('../classes/CosmosItem')
 const CosmosPurchase = require('../classes/CosmosPurchase')
 const libamf = require('libamf')

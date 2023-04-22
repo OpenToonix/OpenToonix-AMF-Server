@@ -1,5 +1,5 @@
-CosmosUser = global.CosmosUser
-CosmosItem = global.CosmosItem
+const CosmosUser = require('./CosmosUser')
+const CosmosItem = require('./CosmosItem')
 
 class CosmosPurchase {
     constructor () {
