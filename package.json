@@ -1,7 +1,7 @@
 {
-  "name": "cosmos-amf-server",
+  "name": "opentoonix-amf-server",
   "version": "1.0.0",
-  "description": "AMF server for Mundo Toonix.",
+  "description": "AMF server for OpenToonix.",
   "main": "main.js",
   "scripts": {
     "start": "node main.js",

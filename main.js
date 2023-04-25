@@ -37,5 +37,5 @@ server.listen(8081, () => {
 })
 
 server.app.get('/*', (req, res) => {
-  res.send('<h2>Cosmos AMF Server</h2>')
+  res.send('<h2>OpenToonix AMF Server</h2>')
 })

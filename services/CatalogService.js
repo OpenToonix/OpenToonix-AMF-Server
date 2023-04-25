@@ -73,7 +73,7 @@ class CatalogService extends libamf.Service {
     /*
         findAllItems
 
-        No se recibe ningun parametro, osea, es void.
+        No se recibe ningun parametro.
 
         Se debe retornar un objeto CosmosItem (por cada registro) dentro de un ArrayCollection.
     */

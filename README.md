@@ -1,2 +1,2 @@
-# Cosmos AMF Server
-AMF server for Mundo Toonix.
+# OpenToonix AMF Server
+AMF server for OpenToonix.
