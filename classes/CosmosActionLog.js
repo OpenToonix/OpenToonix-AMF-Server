@@ -1,11 +1,12 @@
 class CosmosActionLog {
-    constructor () {
-        this.actionDate = new Date()
-        this.action = ''
-        this.area = ''
-        this.message = ''
-        this.serverName = ''
-        this.username = ''
+    constructor (actionDate, action, area, message, serverName, username) {
+        this.actionDate = new Date(actionDate)
+        this.action = action
+        this.area = area
+        this.message = message
+        this.serverName = serverName
+        this.username = username
     }
 }
+
 module.exports = CosmosActionLog

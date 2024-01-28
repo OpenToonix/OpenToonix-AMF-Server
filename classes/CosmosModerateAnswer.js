@@ -1,7 +1,8 @@
 class CosmosModerateAnswer {
-    constructor () {
-        this.code = 0
-        this.message = ''
+    constructor (code, message) {
+        this.code = code
+        this.message = message
     }
 }
+
 module.exports = CosmosModerateAnswer

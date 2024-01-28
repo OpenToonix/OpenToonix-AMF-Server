@@ -11,34 +11,38 @@ class ModerateService extends libamf.Service {
       allowWordsTemporarily
 
         Recibe cinco parametros:
-          - Username como Array, no se porque.
-          - Un String. (En el cliente español envia "Toonix Content : Spanish")
-          - Un String. ("UserName") Ni idea para que es esto.
-          - Un String. ("white") Lo mismo para esto.
-          - Un booleano. Por default envia false.
+          - username: Array. (Desconozco porque llega como Array)
+          - language: String. (En el cliente español se recibe "Toonix Content : Spanish")
+          - type: String. (Siempre se recibe "UserName")
+          - tempListType: String. (Es el tipo de temp list: white o black, pero siempre se recibe white (whitelist))
+          - param2: Boolean. (El cliente siempre envia false)
 
         Hay que retornar un booleano.
     */
-    allowWordsTemporarily(usernameArr, str1, str2, str3, bool) {
+    allowWordsTemporarily(usernameArr, language, type, tempListType, param2) {
     }
 
     /* 
         realTimeMessageFilterWhiteList
 
-        Se recibe un solo parametro:
-          - CosmosMessageData: Object
-              Variables del objeto:
-                - senderUserName: String
-                - receiverUserName: String
-                - message: String
-                - language: String
+        Se reciben cuatro parametros:
+          - senderUserName: String
+          - receiverUserName: String
+          - message: String
+          - languageCode: String
 
         Se debe retornar un objeto CosmosModerateAnswer.
     */
-    realTimeMessageFilterWhiteList(CosmosMessageData) {
+    realTimeMessageFilterWhiteList(senderUserName, receiverUserName, message, languageCode) {
         /* 
-            Si no me equivoco, en caso de ser existosa esta peticion, "code" debe ser 0.
-            Y "message" solo debe retornar el valor de la variable de entrada.
+            En caso de ser existosa esta peticion, "code" debe ser 0,
+            pero si el usuario esta baneado o silenciado, se debe enviar un code distinto a 0 (cualquiera).
+
+            En "message" se debe retornar el mensaje filtrado.
+
+            Nota:
+            Si una palabra prohibida esta dentro del mensaje, esta se debe reemplazar por una almohadilla (#)
+            (La almohadilla debe tener la longitud de la palabra prohibida) 
         */
 
         /* 
@@ -77,4 +81,5 @@ class ModerateService extends libamf.Service {
     disallowWords(arr, str1, str2, str3) {
     }
 }
+
 module.exports = ModerateService

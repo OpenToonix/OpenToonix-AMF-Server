@@ -1,5 +1,5 @@
 const ArrayCollection = require('libamf/src/amf/flash/flex/ArrayCollection')
-const CosmosFriend = require('../classes/CosmosFriend')
+const CosmosFriendEntry = require('../classes/CosmosFriendEntry')
 const CosmosOfflineMessage = require('../classes/CosmosOfflineMessage')
 const CosmosPurchase = require('../classes/CosmosPurchase')
 const CosmosUser = require('../classes/CosmosUser')
@@ -49,23 +49,21 @@ class UserService extends libamf.Service {
     }
 
     /*
-        banUser
+        banUser (Y no, no se usa para banear, sino para reportar usuarios)
 
-        Se recibe un parametro:
-          - CosmosDenounceVO: Object
-              Variables del objeto:
-                - userId: Int
-                - denouncedId: Int
-                - area: String
-                - denouncedUsername: String
-                - denouncedEmail: String
-                - reason: String
-                - date: Date
-                - languageCode: String
+        Se reciben ocho parametros:
+            - userId: Int
+            - denouncedId: Int
+            - area: String
+            - denouncedUsername: String
+            - denouncedEmail: String
+            - reason: String
+            - date: Date
+            - languageCode: String
 
         Se debe retornar un booleano.
     */
-    banUser(CosmosDenounceVO) {
+    banUser(userId, denouncedId, area, denouncedUsername, denouncedEmail, reason, date, languageCode) {
     }
 
     /*
@@ -79,6 +77,7 @@ class UserService extends libamf.Service {
         Se debe retornar un booleano.
     */
     registerUser(userId, userName, avatarImagePath) {
+        return true
     }
 
     /*
@@ -152,7 +151,7 @@ class UserService extends libamf.Service {
     findFriendList(userId) {
         const resp = new ArrayCollection()
         resp.push(
-            new CosmosFriend()
+            new CosmosFriendEntry()
         )
 
         return resp
@@ -221,4 +220,5 @@ class UserService extends libamf.Service {
         return new CosmosUser()
     }
 }
+
 module.exports = UserService

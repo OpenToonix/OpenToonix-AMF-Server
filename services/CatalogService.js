@@ -138,4 +138,5 @@ class CatalogService extends libamf.Service {
         return resp
     }
 }
+
 module.exports = CatalogService

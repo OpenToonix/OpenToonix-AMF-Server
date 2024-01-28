@@ -30,4 +30,5 @@ class PlanegochiService extends libamf.Service {
         return new CosmosPlanegochi()
     }
 }
+
 module.exports = PlanegochiService

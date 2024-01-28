@@ -6,14 +6,10 @@ const ModerateService = require('./services/ModerateService')
 const PlanegochiService = require('./services/PlanegochiService')
 const UserService = require('./services/UserService')
 
-const server = new libamf.Server({
-  path: '/messagebroker/amf'
-})
-
 libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.ActionLogDto', require('./classes/CosmosActionLog'))
 libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.AwardDTO', require('./classes/CosmosAward'))
 libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.CountryDTO', require('./classes/CosmosCountry'))
-libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.FriendEntryDTO', require('./classes/CosmosFriend'))
+libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.FriendEntryDTO', require('./classes/CosmosFriendEntry'))
 libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.ItemDTO', require('./classes/CosmosItem'))
 libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.ModerateAnswerDTO', require('./classes/CosmosModerateAnswer'))
 libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.OfflineMessageDTO', require('./classes/CosmosOfflineMessage')) // Private Messages.
@@ -25,6 +21,10 @@ libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.UserDTO', require('.
 libamf.Service.ForceSuffix = false
 libamf.Service.RequireRegistration = false
 libamf.Server.DisableDefaultHome = true
+
+const server = new libamf.Server({
+  path: '/messagebroker/amf'
+})
 
 server.registerService(new AwardService())
 server.registerService(new CatalogService())

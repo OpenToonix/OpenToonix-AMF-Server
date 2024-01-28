@@ -59,4 +59,5 @@ class AwardService extends libamf.Service {
         return resp
     }
 }
+
 module.exports = AwardService

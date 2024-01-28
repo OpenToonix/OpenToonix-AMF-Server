@@ -1,9 +1,13 @@
+const CosmosMainClass = require('./CosmosMainClass')
 const CosmosUser = require('./CosmosUser')
 
-class CosmosPlanegochi {
-    constructor () {
-        this.owner = new CosmosUser()
-        this.state = ''
+class CosmosPlanegochi extends CosmosMainClass {
+    constructor (planegochiId, ownerUserData, planegochiData) {
+        super(planegochiId)
+
+        this.owner = new CosmosUser(ownerUserData)
+        this.state = planegochiData
     }
 }
+
 module.exports = CosmosPlanegochi

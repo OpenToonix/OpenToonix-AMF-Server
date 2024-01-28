@@ -1,11 +1,12 @@
 class CosmosAward {
-    constructor () {
-        this.id = 0
-        this.userId = 0
-        this.award = ''
-        this.category = ''
-        this.creationDate = new Date()
-        this.data = ''
+    constructor (awardId, userId, award, category, creationDate, data) {
+        this.id = awardId
+        this.userId = userId
+        this.award = award
+        this.category = category
+        this.creationDate = new Date(creationDate)
+        this.data = data
     }
 }
+
 module.exports = CosmosAward

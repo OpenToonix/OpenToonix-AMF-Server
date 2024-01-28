@@ -1,7 +1,7 @@
 {
   "name": "opentoonix-amf-server",
   "version": "1.0.0",
-  "description": "AMF server for OpenToonix.",
+  "description": "AMF (Action Message Format) server for OpenToonix.",
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
