@@ -2,6 +2,7 @@ const libamf = require('libamf')
 
 const AwardService = require('./services/AwardService')
 const CatalogService = require('./services/CatalogService')
+const HomeSrv = require('./services/HomeSrv')
 const ModerateService = require('./services/ModerateService')
 const PlanegochiService = require('./services/PlanegochiService')
 const UserService = require('./services/UserService')
@@ -28,6 +29,7 @@ const server = new libamf.Server({
 
 server.registerService(new AwardService())
 server.registerService(new CatalogService())
+server.registerService(new HomeSrv())
 server.registerService(new ModerateService())
 server.registerService(new PlanegochiService())
 server.registerService(new UserService())
