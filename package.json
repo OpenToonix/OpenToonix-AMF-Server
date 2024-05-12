@@ -10,7 +10,6 @@
   "author": "MatyGamingHD",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^16.0.3",
     "libamf": "^1.4.2"
   }
 }
