@@ -50,36 +50,6 @@ class ModerateService extends libamf.Service {
         */
         return new CosmosModerateAnswer()
     }
-
-    /*
-        logEvents
-
-        CosmosLogEvent: Objeto
-          Variables:
-            - place: String
-            - value: String
-            - senderUserName: String
-            - receiverUserName: String
-            - event: String
-
-        Retorna un booleano.
-    */
-    logEvents(CosmosLogEvent) {
-    }
-
-    /* 
-        disallowWords (Desconozco si se usa este servicio)
-
-        Recibe cuatro parametros (No se que data se recibe): 
-          - arr: Array
-          - str1: String
-          - str2: String
-          - str3: String
-
-        Retornar un booleano.
-    */
-    disallowWords(arr, str1, str2, str3) {
-    }
 }
 
 module.exports = ModerateService

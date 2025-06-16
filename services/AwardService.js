@@ -41,23 +41,6 @@ class AwardService extends libamf.Service {
 
         return resp
     }
-
-    /*
-        findAwardByCategory
-
-        Se recibe un solo parametro:
-          - category: String
-
-        Se debe retornar un objeto CosmosAward (por cada registro) dentro de un ArrayCollection.
-    */
-    findAwardByCategory(category) {
-        const resp = new ArrayCollection()
-        resp.push(
-            new CosmosAward()
-        )
-
-        return resp
-    }
 }
 
 module.exports = AwardService
