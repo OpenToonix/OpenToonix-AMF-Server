@@ -4,7 +4,7 @@
   "description": "AMF (Action Message Format) server for OpenToonix.",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js",
+    "start": "node .",
     "test": "node tests/servicetests.js"
   },
   "author": "MatyGamingHD",
@@ -16,7 +16,8 @@
   "engineStrict": true,
   "packageManager": "pnpm@10.24.0",
   "dependencies": {
-    "libamf": "^1.4.2"
+    "@jscv-solutions/node-logger": "^1.1.3",
+    "libamf": "^1.4.2",
+    "winston": "^3.19.0"
   }
 }
-

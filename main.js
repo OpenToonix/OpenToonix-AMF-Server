@@ -1,3 +1,4 @@
+const ConsoleLogger = require('@jscv-solutions/node-logger').default
 const libamf = require('libamf')
 
 const AwardService = require('./services/AwardService')
@@ -5,6 +6,8 @@ const HomeSrv = require('./services/HomeSrv')
 const ModerateService = require('./services/ModerateService')
 const PlanegochiService = require('./services/PlanegochiService')
 const UserService = require('./services/UserService')
+
+const consoleLogger = ConsoleLogger.getLogger('main', 'verbose', true)
 
 libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.AwardDTO', require('./classes/CosmosAward'))
 libamf.registerClassAlias('com.turner.dmtla.cosmos.core.dto.FriendEntryDTO', require('./classes/CosmosFriendEntry'))
@@ -29,7 +32,7 @@ server.registerService(new PlanegochiService())
 server.registerService(new UserService())
 
 server.listen(8081, () => {
-  console.log('Listening on port ' + server.port)
+  consoleLogger.info('Listening on port ' + server.port)
 })
 
 server.app.get('/*', (req, res) => {
